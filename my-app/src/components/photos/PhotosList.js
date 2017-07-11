@@ -11,7 +11,7 @@ import View from '../layout/View'
 //import UserProfileContainer from './UserProfileContainer'
 
 const PhotosList = ({ photos = [], match, history, width }) => {
-
+ history.push(`/photos/${photos.data}`)
   let listItems
 
   if (photos.length === 0) {

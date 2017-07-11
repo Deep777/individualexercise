@@ -1,6 +1,6 @@
 // get all the photos
 export const fetchPhotos = () => (
-  fetch('http://jsonplaceholder.typicode.com/photos?_limit=30', {
+  fetch(`http://jsonplaceholder.typicode.com/photos?_limit=30`, {
       method: 'get'
   }).then((response) => response.json())
 )
