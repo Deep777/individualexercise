@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import withWidth from 'material-ui/utils/withWidth'
 
-import Photos from './Photos'
+import PhotosList from './PhotosList'
 import { fetchPhotos } from '../../api/photosdata'
 
 class PhotosContainer extends Component {
@@ -22,7 +22,7 @@ class PhotosContainer extends Component {
 
   render() {
     return (
-      <Photos
+      <PhotosList
         photos={this.state.photos}
         match={this.props.match}
         history={this.props.history}

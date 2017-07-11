@@ -10,12 +10,12 @@ import { Route, Switch, withRouter } from 'react-router-dom'
 import View from '../layout/View'
 //import UserProfileContainer from './UserProfileContainer'
 
-const Photos = ({ photos = [], match, history, width }) => {
+const PhotosList = ({ photos = [], match, history, width }) => {
 
   let listItems
 
   if (photos.length === 0) {
-    listItems = <View>Loading...</View>
+    listItems = <View>Loading123...</View>
   } else {
     listItems = (
       <View>
@@ -41,9 +41,9 @@ const Photos = ({ photos = [], match, history, width }) => {
   )
 }
 
-export default Photos
+export default PhotosList
 
-Photos.propTypes = {
+PhotosList.propTypes = {
   photos: PropTypes.array.isRequired,
   history: PropTypes.object.isRequired,
   match: PropTypes.object.isRequired,
