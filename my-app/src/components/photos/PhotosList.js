@@ -23,7 +23,9 @@ const PhotosList = ({ photos = [], match, history, width }) => {
           <ListItem
     //        primaryText={ `${user.name.first} ${user.name.last}`}
             leftIcon={<ActionGrade color={pinkA200} />}
-        //    rightAvatar={<Avatar src={`images/${photos.username}_sm.jpg`} />}
+//            rightAvatar={<Avatar src={`images/${photos.username}_sm.jpg`} />}
+            rightAvatar={<Avatar src={`${photos[0].avatar}`}/>}
+
           />
         ))}
       </View>
