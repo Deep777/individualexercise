@@ -24,7 +24,7 @@ class NavDrawer extends Component {
           onTitleTouchTap={this.props.toggleNav}
           title="Photos Manager"
         />
-        <MenuItem onClick={() => { this.menuItemClicked('/photos') }}>Photos</MenuItem>
+        <MenuItem onClick={() => { this.menuItemClicked('/photos/all') }}>Photos</MenuItem>
       </Drawer>
     )
   }
