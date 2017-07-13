@@ -11,7 +11,10 @@ import View from '../layout/View'
 //import UserProfileContainer from './UserProfileContainer'
 
 const PhotosList = ({ photos = [], match, history, width }) => {
- history.push(`/photos/${photos.data}`)
+  const pushPhoto = (photo) => {
+    history.push(`/photos/${photo.id}`)
+  }
+
   let listItems
 
   if (photos.length === 0) {
@@ -24,8 +27,8 @@ const PhotosList = ({ photos = [], match, history, width }) => {
     //        primaryText={ `${user.name.first} ${user.name.last}`}
             leftIcon={<ActionGrade color={pinkA200} />}
 //            rightAvatar={<Avatar src={`images/${photos.username}_sm.jpg`} />}
-            rightAvatar={<Avatar src={`${photos[0].avatar}`}/>}
-
+            rightAvatar={<Avatar src={`${photo.thumbnailUrl}`}/>}
+            onClick={() => { pushPhoto(photo) } }
           />
         ))}
       </View>
